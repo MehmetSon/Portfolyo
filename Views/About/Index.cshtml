@@ -1,0 +1,29 @@
+﻿@model About
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+
+<section id="about" class="s-about target-section">
+    <div class="content" style="align-content:center">
+        <div class="container-fluid">
+            <div class="col-full text-center">
+                <h3>Hakkımda</h3>
+                <h1>@Model.Title</h1>
+                <p class="lead">@Model.SubDescription</p>
+                <div>@Model.Details</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div style=" display: flex;
+    justify-content: center; /* Ortalamak için */
+    margin-top: auto;
+    position: absolute; /* Sayfanın altına yerleştirme */
+    bottom: 20px; /* Sayfanın altından mesafe */
+    width: 100%;">
+    <a href="/About/UpdateAbouT/@Model.AboutId" class="btn btn-primary">Hakkımda Güncelle</a>
+</div>
+
+
